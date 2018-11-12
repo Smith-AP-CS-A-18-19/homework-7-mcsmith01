@@ -4,7 +4,13 @@ public class Homework7 {
 	 * from 1 to x and return the result
 	 */
 	public static int problem1(int x) {
-
+		int n = 1;
+		int sum = 0;
+		while (n <= x) {
+			sum += n;
+			n++;
+		}
+		return sum;
 	}
 
 	/* Use a loop (while or for) to find the
@@ -14,7 +20,13 @@ public class Homework7 {
 	 * use that method, you must use a loop
 	 */
 	public static int problem2(String s, String t) {
-
+		for (int i = 0; i <= s.length() - t.length(); i++) {
+			String sub = s.substring(i, i + t.length());
+			if (sub.equals(t)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -22,7 +34,11 @@ public class Homework7 {
 	 * power
 	 */
 	public static int problem3(int a, int b) {
-
+		int result = 1;
+		for (int i = 1; i <= b; i++) {
+			result *= a;
+		}
+		return result;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -30,7 +46,13 @@ public class Homework7 {
 	 * b (i.e., calculate a / b using a loop)
 	 */
 	public static int problem4(int a, int b) {
-
+		int result = 0;
+		int value = a;
+		while (value >= b) {
+			value -= b;
+			result++;
+		}
+		return result;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -38,7 +60,11 @@ public class Homework7 {
 	 * (i.e., calculate a % b using a loop)
 	 */
 	 public static int problem5(int a, int b) {
-
+		 int value = a;
+		 while (value >= b) {
+			 value -= b;
+		 }
+		 return value;
 	 }
 
 	public static void main(String[] args) {
